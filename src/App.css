@@ -1,0 +1,114 @@
+export default function Website() {
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-900">
+      {/* Header */}
+      <header className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+          <h1 className="text-2xl font-bold text-blue-700">SanTech Solutions</h1>
+          <nav className="space-x-6 text-sm font-medium">
+            <a href="#services" className="hover:text-blue-600">Services</a>
+            <a href="#architecture" className="hover:text-blue-600">Architecture</a>
+            <a href="#about" className="hover:text-blue-600">About</a>
+            <a href="#contact" className="hover:text-blue-600">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="bg-gradient-to-r from-blue-700 to-indigo-700 text-white">
+        <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-4xl font-bold mb-4">Data & Analytics Architecture That Scales</h2>
+            <p className="text-lg mb-6">
+              We design, build, and optimize modern data platforms that transform raw data into actionable insights.
+            </p>
+            <a href="#contact" className="inline-block bg-white text-blue-700 px-6 py-3 rounded-2xl font-semibold shadow">Get Started</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section id="services" className="max-w-7xl mx-auto px-6 py-16">
+        <h3 className="text-3xl font-bold mb-10">Our Services</h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-white p-6 rounded-2xl shadow">
+            <h4 className="font-semibold text-lg mb-2">Data Architecture & Strategy</h4>
+            <p>Scalable cloud data architecture, lakehouse design, and governance frameworks.</p>
+          </div>
+          <div className="bg-white p-6 rounded-2xl shadow">
+            <h4 className="font-semibold text-lg mb-2">Data Engineering</h4>
+            <p>Robust ETL/ELT pipelines using Databricks, Informatica, Spark, and SQL.</p>
+          </div>
+          <div className="bg-white p-6 rounded-2xl shadow">
+            <h4 className="font-semibold text-lg mb-2">Analytics & BI</h4>
+            <p>Power BI dashboards, semantic models, KPIs, and PIT reporting.</p>
+          </div>
+          <div className="bg-white p-6 rounded-2xl shadow">
+            <h4 className="font-semibold text-lg mb-2">Cloud Migration</h4>
+            <p>Modernize legacy systems and optimize cloud cost and performance.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Architecture */}
+      <section id="architecture" className="bg-gray-100 py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <h3 className="text-3xl font-bold mb-6">Reference Architecture</h3>
+          <p className="max-w-3xl">
+            Our architecture follows best practices using Azure Databricks, ADLS, Informatica IICS, and Power BI with security, performance, and scalability at its core.
+          </p>
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="max-w-7xl mx-auto px-6 py-16">
+        <h3 className="text-3xl font-bold mb-6">About Us</h3>
+        <p className="max-w-3xl">
+          SanTech Solutions is a data & analytics consulting company focused on delivering reliable, business-driven data platforms. We combine deep technical expertise with practical architecture design to help organizations make confident decisions using data.
+        </p>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="bg-blue-700 text-white py-16">
+        <div className="max-w-3xl mx-auto px-6">
+          <h3 className="text-3xl font-bold mb-4">Contact Us</h3>
+          <p className="mb-8">Let’s discuss how we can build your data platform.</p>
+
+          <form name="contact" method="POST" data-netlify="true" className="bg-white text-gray-900 p-8 rounded-2xl shadow space-y-4">
+            <input type="hidden" name="form-name" value="contact" />
+
+            <div>
+              <label className="block text-sm font-medium mb-1">Name</label>
+              <input name="name" required className="w-full border rounded-xl px-4 py-2" />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1">Email</label>
+              <input type="email" name="email" required className="w-full border rounded-xl px-4 py-2" />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1">Message</label>
+              <textarea name="message" rows="4" required className="w-full border rounded-xl px-4 py-2"></textarea>
+            </div>
+
+            <button type="submit" className="bg-blue-700 text-white px-6 py-3 rounded-2xl font-semibold">Send Message</button>
+          </form>
+
+          <div className="mt-6">
+            <p>Email: <strong>info@santechsolutions.com</strong></p>
+            <p>Location: India | Serving Global Clients</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-gray-400 text-sm py-6">
+        <div className="max-w-7xl mx-auto px-6 flex justify-between">
+          <p>© {new Date().getFullYear()} SanTech Solutions</p>
+          <p>Data • Analytics • Architecture</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
